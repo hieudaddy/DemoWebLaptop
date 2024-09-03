@@ -1,3 +1,3 @@
 <?php
-    $conn = new PDO('mysql:host=localhost; dbname=filled_btl', 'root', '');
+    $conn = new PDO("dbhades.mysql.database.azure.com","lehieu","Hieztlyn23","web_laptop");
 ?>
