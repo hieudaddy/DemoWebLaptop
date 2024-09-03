@@ -1,31 +1,3 @@
-<?php
-   include 'connection.php';
-   session_start();
-   if (!isset($_SESSION['ID_Account']) || $_SESSION['ID_Account'] == NULL || !isset($_SESSION['user']) || $_SESSION['user'] == null || $_SESSION['user'] == 'admin' || $_SESSION['ID_Account'] == 1) {
-      header('Location: sign-in.php');
-      exit();
-   }
-   $ID_LoaiSanPham = '';
-   if(isset($_GET['ID_LoaiSanPham'])){
-      $ID_LoaiSanPham = $_GET['ID_LoaiSanPham'];
-   }
-   $TenSP = '';
-   if(isset($_GET['TenSP'])){
-      $TenSP = $_GET['TenSP'];
-   }
-   $ID_Hang = '';
-   if(isset($_GET['ID_Hang'])){
-      $ID_Hang = $_GET['ID_Hang'];
-   }
-   if(isset($_SESSION['error'])){
-      echo '
-      <script type="text/javascript">
-         alert("'.$_SESSION['error'].'");
-      </script>
-      ';
-      unset($_SESSION['error']);
-   }
-?>
 <!doctype html>
 <html lang="en">
    <head>
